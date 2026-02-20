@@ -169,7 +169,7 @@ class TestAccountService(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         data = resp.get_json()
         self.assertEqual(len(data), 5)
-  
+
     # Delete Feature test
     def test_delete_account(self):
         """It should Delete an Account"""
@@ -196,7 +196,7 @@ class TestAccountService(TestCase):
         }
         for key, value in headers.items():
             self.assertEqual(response.headers.get(key), value)
-    
+
     # Cors Hearder
     def test_cors_security(self):
         """It should return a CORS header"""
